@@ -207,10 +207,16 @@
     <Compile Include="Tops.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\apparel1.jpg" />
+    <Content Include="Content\apparel2.jpeg" />
+    <Content Include="Content\apparel3.jpg" />
+    <Content Include="Content\bannershirts.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\redshirt.jpg" />
+    <Content Include="Content\whiteshirt.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

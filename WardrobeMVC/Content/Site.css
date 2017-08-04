@@ -43,4 +43,13 @@ div.navbar.navbar-inverse.navbar-fixed-top {
 .dropdown-content {
      box-shadow: 0 7px 7px gray;
 }
+h4 {
+    font-family: 'Lora', serif;
+}
+footer {
+    background-color:#81C784;
+    padding:50px;
+}
+
+
 
