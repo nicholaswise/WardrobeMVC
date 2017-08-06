@@ -10,10 +10,10 @@
         @Html.ActionLink("Create New", "Create")
     </p>
 </center>
-
+<!--CARD VIEW FOR USER ENTRIES-->
 @foreach (var item in Model)
 {
-<div class="col s12 m7">
+@*<div class="col s12 m7">
     <h3 class="header">@Html.DisplayFor(modelItem => item.Name)</h3>
     <div class="card horizontal">
         <div class="card-image">
@@ -37,5 +37,27 @@
             </div>
         </div>
     </div>
+</div>*@
+<!--Card-->
+<div class="card">
+
+    <!--Card image-->
+    <img class="img-fluid col-md-3" src="~/Content/womanshirt.jpg" alt="Card image cap">
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h4>
+        <!--Text-->
+        <p class="card-text">@Html.DisplayFor(modelItem => item.Type)</p>
+        <p class="card-text">@Html.DisplayFor(modelItem => item.Color)</p>
+        <p class="card-text">@Html.DisplayFor(modelItem => item.Season)</p>
+        <p class="card-text">@Html.DisplayFor(modelItem => item.Occasion)</p>
+        <a class="btn">@Html.ActionLink("Edit", "Edit", new { id = item.TopsID })</a>
+        <a class="btn">@Html.ActionLink("Details", "Details", new { id = item.TopsID })</a>
+        <a class="btn">@Html.ActionLink("Delete", "Delete", new { id = item.TopsID })</a>
+    </div>
+
 </div>
 }
+
