@@ -13,29 +13,26 @@
 
 @foreach (var item in Model)
 {
-    <div class="col s12 m7">
-        <h3 class="header">@Html.DisplayFor(modelItem => item.Name)</h3>
-        <div class="card horizontal">
-            <div class="card-image">
-                <img class="img-responsive" src="">
+    <div class="row">
+        <div class="col-md-4" />
+        <div class="thumbnail">
+            <a href="~/Content/jeans.jpg">
+                <img src="~/Content/jeans.jpg" alt="jeans" />
+            </a>
+            <div class="caption">
+                <p>@Html.DisplayFor(modelItem => item.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Type)</p>
+                <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                <p>@Html.DisplayFor(modelItem => item.Season)</p>
+                <p>@Html.DisplayFor(modelItem => item.Occasion)</p>
             </div>
-            <div class="card-small">
-                <div class="card-content">
-                    <h4>@Html.DisplayNameFor(model => model.Type)</h4>
-                    <p>@Html.DisplayFor(modelItem => item.Type)</p>
-                    <h4>@Html.DisplayNameFor(model => model.Color)</h4>
-                    <p>@Html.DisplayFor(modelItem => item.Color)</p>
-                    <h4>@Html.DisplayNameFor(model => model.Season)</h4>
-                    <p>@Html.DisplayFor(modelItem => item.Season)</p>
-                    <h4>@Html.DisplayNameFor(model => model.Occasion)</h4>
-                    <p>@Html.DisplayFor(modelItem => item.Occasion)</p>
-                    <span>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.BottomsID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.BottomsID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.BottomsID })
-                    </span>
+            <center>
+                <div class="caption">
+                    <a class="btn"> @Html.ActionLink("Edit", "Edit", new { id = item.BottomsID })</a>
+                    <a class="btn"> @Html.ActionLink("Details", "Details", new { id = item.BottomsID })</a>
+                    <a class="btn"> @Html.ActionLink("Delete", "Delete", new { id = item.BottomsID })</a>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
 }

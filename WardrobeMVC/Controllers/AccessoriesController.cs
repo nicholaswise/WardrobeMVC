@@ -47,7 +47,7 @@ namespace WardrobeMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AccessoriesID,Name,Photo,Type,Color,Season,Occasion")] Accessory accessory)
+        public ActionResult Create([Bind(Include = "Name,Photo,Type,Color,Season,Occasion")] Accessory accessory)
         {
             if (ModelState.IsValid)
             {

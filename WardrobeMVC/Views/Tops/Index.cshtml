@@ -13,51 +13,28 @@
 <!--CARD VIEW FOR USER ENTRIES-->
 @foreach (var item in Model)
 {
-@*<div class="col s12 m7">
-    <h3 class="header">@Html.DisplayFor(modelItem => item.Name)</h3>
-    <div class="card horizontal">
-        <div class="card-image">
-            <img class="img-responsive" src="">
-        </div>
-        <div class="card-small">
-            <div class="card-content">
-                <h4>@Html.DisplayNameFor(model => model.Type)</h4>
-                <p>@Html.DisplayFor(modelItem => item.Type)</p>
-                <h4>@Html.DisplayNameFor(model => model.Color)</h4>
-                <p>@Html.DisplayFor(modelItem => item.Color)</p>
-                <h4>@Html.DisplayNameFor(model => model.Season)</h4>
-                <p>@Html.DisplayFor(modelItem => item.Season)</p>
-                <h4>@Html.DisplayNameFor(model => model.Occasion)</h4>
-                <p>@Html.DisplayFor(modelItem => item.Occasion)</p>
-                <span>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.TopsID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.TopsID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.TopsID })
-                </span>
-            </div>
+
+    <div class="row">
+        <div class="col-md-4" />
+        <div class="thumbnail">
+            <a href="~/Content/womanshirt.jpg">
+                <img src="~/Content/womanshirt.jpg" alt="woman shirt" />
+            </a>
+                <div class="caption">
+                    <p>@Html.DisplayFor(modelItem => item.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Type)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Season)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Occasion)</p>
+                </div>
+            <center>
+                <div class="caption">
+                    <a class="btn"> @Html.ActionLink("Edit", "Edit", new { id = item.TopsID })</a>
+                    <a class="btn"> @Html.ActionLink("Details", "Details", new { id = item.TopsID })</a>
+                    <a class="btn"> @Html.ActionLink("Delete", "Delete", new { id = item.TopsID })</a>
+                </div>
+            </center>
         </div>
     </div>
-</div>*@
-<!--Card-->
-<div class="card">
-
-    <!--Card image-->
-    <img class="img-fluid col-md-3" src="~/Content/womanshirt.jpg" alt="Card image cap">
-
-    <!--Card content-->
-    <div class="card-body">
-        <!--Title-->
-        <h4 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h4>
-        <!--Text-->
-        <p class="card-text">@Html.DisplayFor(modelItem => item.Type)</p>
-        <p class="card-text">@Html.DisplayFor(modelItem => item.Color)</p>
-        <p class="card-text">@Html.DisplayFor(modelItem => item.Season)</p>
-        <p class="card-text">@Html.DisplayFor(modelItem => item.Occasion)</p>
-        <a class="btn">@Html.ActionLink("Edit", "Edit", new { id = item.TopsID })</a>
-        <a class="btn">@Html.ActionLink("Details", "Details", new { id = item.TopsID })</a>
-        <a class="btn">@Html.ActionLink("Delete", "Delete", new { id = item.TopsID })</a>
-    </div>
-
-</div>
 }
 
